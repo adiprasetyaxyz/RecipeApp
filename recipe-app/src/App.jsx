@@ -1,8 +1,20 @@
 import { useState } from "react";
-import "./App.css";
-
+import RecipesList from "./components/RecipesList";
+import Search from "./components/Search";
 function App() {
-  return <div className="App"></div>;
+  const [recipesData, setRecipesData] = useState([]);
+  return (
+    <div className="App">
+      <Search recipesData={recipesData} setRecipesData={setRecipesData} />
+      <div>
+        <h2>Item</h2>
+        <RecipesList
+          recipesData={recipesData}
+          setRecipesData={setRecipesData}
+        />
+      </div>
+    </div>
+  );
 }
 
 export default App;
