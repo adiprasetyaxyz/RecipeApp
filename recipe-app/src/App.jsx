@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <Search recipesData={recipesData} setRecipesData={setRecipesData} />
       <div>
-        <h2>Item</h2>
+        <h2 className="text-xl font-bold underline">Item</h2>
         <RecipesList
           recipesData={recipesData}
           setRecipesData={setRecipesData}

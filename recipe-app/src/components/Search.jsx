@@ -18,14 +18,15 @@ export default function Search({ recipesData, setRecipesData }) {
     fetchRecipesData();
   }, [query]);
   return (
-    <>
-      <form>
+    <div className="flex justify-center items-center">
+      <form className="w-full max-w-xl">
         <input
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
+          className="w-full justify-items-center shadow-md h-7 rounded-md top-3 "
         />
       </form>
-    </>
+    </div>
   );
 }
