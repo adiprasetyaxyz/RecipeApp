@@ -7,6 +7,7 @@ import Mealplan from "./page/MealPlan";
 import ErrorPage from "./page/ErrorPage";
 import MainLayout from "./page/MainLayout";
 import "./index.css";
+import RecipeDetailPage from "./page/RecipeDetailPage";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,22 @@ const router = createBrowserRouter([
     element: (
       <MainLayout>
         <Mealplan />
+      </MainLayout>
+    ),
+  },
+  {
+    path: "/recipe/:recipeId",
+    element: (
+      <MainLayout>
+        <RecipeDetailPage />
+      </MainLayout>
+    ),
+  },
+  {
+    path: "/favorite/recipe/:recipeId",
+    element: (
+      <MainLayout>
+        <RecipeDetailPage />
       </MainLayout>
     ),
   },

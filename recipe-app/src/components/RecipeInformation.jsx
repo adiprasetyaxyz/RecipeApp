@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import API_ENDPOINT from "../scripts/globals/api-endpoint";
 import CONFIG from "../scripts/globals/config";
+import FoodTag from "./FoodTag";
 
 export default function RecipeInformation({ recipe }) {
   const [recipeInformation, setRecipeInformation] = useState({});
@@ -30,9 +31,11 @@ export default function RecipeInformation({ recipe }) {
 
   return (
     <div>
-      <h2>Recipe Information</h2>
-      <p>Source Name: {recipeInformation.sourceName}</p>
-      {/* Add more fields as needed */}
+      <p>Source : {recipeInformation.sourceName}</p>
+      <FoodTag
+        recipeInformation={recipeInformation}
+        setRecipeInformation={setRecipeInformation}
+      />
     </div>
   );
 }
