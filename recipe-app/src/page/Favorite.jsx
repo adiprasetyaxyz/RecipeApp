@@ -13,7 +13,9 @@ export default function Favorite() {
 
   return (
     <div>
-      <h2>Favorite</h2>
+      <h1 className="text-center text-3xl font-bold p-10">
+        Your Favorite Recipes
+      </h1>
       {likedRecipes.length > 0 ? (
         <RecipesList recipesData={likedRecipes} />
       ) : (
